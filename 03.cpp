@@ -1,20 +1,21 @@
 #include <stdio.h>
+int a[5]={ 0,10,20,30,40};
+void printAll(){
+    for(int i=0;i<5;i++) printf("%d ",a[i]);
+    printf("\n");}
 int main()
 {
-    int n[3]={10,20,30};
-    printf("n[0]:%d n[1]:%d n[2]:%d\n",n[0],n[1],n[2]);
-
-    int  *p=&n[0];
-    *p=200;
-    printf("n[0]:%d n[1]:%d n[2]:%d\n",n[0],n[1],n[2]);
-
-    int  *p2=&n[2];
-    *p2=300;
-    printf("n[0]:%d n[1]:%d n[2]:%d\n",n[0],n[1],n[2]);
-
-    p2=p;
-    *p2=400;
-    printf("n[0]:%d n[1]:%d n[2]:%d\n",n[0],n[1],n[2]);
-
-    return 0;
+    printAll();
+    int *p=&a[2];
+    *p=222;
+    printAll();
+    printf("p心裡小紙條記的值是:%d\n",p);
+    p=p+2;
+    *p=666;
+    printAll();
+    printf("p心裡小紙條記的值是:%d\n",p);
+    p--;
+    *p=555;
+    printAll();
+    printf("p心裡小紙條記的值是:%d\n",p);
 }

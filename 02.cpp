@@ -1,14 +1,18 @@
 #include <stdio.h>
+int a[5]={ 0,10,20,30,40};
+void printAll(){
+    for(int i=0;i<5;i++) printf("%d ",a[i]);
+    printf("\n");}
 int main()
 {
-    int n1=10,n2=20,n3=30;
-    printf("n1:%d n2:%d n3:%d\n",n1,n2,n3);
-
-    int  *p=&n1;
-    *p=200;
-    printf("n1:%d n2:%d n3:%d\n",n1,n2,n3);
-
-    int  *p2=&n3;
-    *p2=300;
-    printf("n1:%d n2:%d n3:%d\n",n1,n2,n3);
+    printAll();
+    int *p=&a[2];
+    *p=222;
+    printAll();
+    p=p+2;
+    *p=666;
+    printAll();
+    p--;
+    *p=555;
+    printAll();
 }

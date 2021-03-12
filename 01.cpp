@@ -1,10 +1,9 @@
 #include <stdio.h>
 int main()
 {
-    int n1=10,n2=20,n3=30;
-    printf("n1:%d n2:%d n3:%d\n",n1,n2,n3);
-
-    int  *p=&n1;
-    *p=200;
-    printf("n1:%d n2:%d n3:%d\n",n1,n2,n3);
+    int a[5]={0,10,20,20,40};
+    int *p=&a[2];
+    *p=222;
+    p=p+2;
+    *p=666;
 }
