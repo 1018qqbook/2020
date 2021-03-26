@@ -304,3 +304,45 @@ int main()
     printf("%.2f %.2f %.2f\n",p->x,p->y,p->z);
 }
 ```
+2021/03/26程式碼倉庫
+## 第一題程式碼	
+```C
+#include <stdio.h>
+int main()
+{
+    char line[10]="decline";
+    char line2[10]={'p','r','o','p','e','r','\0'};
+
+    printf("%s\n",line);
+    printf("%s\n",line2);
+}
+```
+## 第二題程式碼
+```C
+#include <stdio.h>
+int main()
+{
+    char line[10]="decline";
+    char line2[10]={'p','r','o','p','e','r','\0'};
+
+    printf("%s\n",line);
+    printf("%s\n",line2);
+
+    char line3[]="majority";
+    printf("%s\n",line3);
+    char line4[]={'m','a','j','o','r','i','t','y'};
+    printf("你看看你看看,現在印出來的line4: ==%s==\n",line4);
+}
+```
+## 第三題程式碼
+```C
+#include <stdio.h>
+int main()
+{
+    char line[5][10]={"decline","proper","majority","bullet","shop"};
+
+    for(int i=0;i<5;i++){
+        printf("%s\n",line[i]);
+    }
+}
+```
