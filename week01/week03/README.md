@@ -423,8 +423,142 @@ int main()
 	}
 } 
 ```    
- 
-         
+ ## 第二題程式碼
+ ```C
+ #include <stdio.h>
+#include <string.h>
+int main()
+{
+	char a[3];
+	for(int i=0;i<4;i++)
+	{
+		scanf("%c",&a[i]);
+	}
+	
+	if(a[0] == a[3] && a[1] == a[2]) printf("YES\n");
+	else printf("NO\n");
+}
+```
+## 第三題程式碼
+```C
+#include <stdio.h>
+int f(int n)
+{
+	int p;
+	int m=0;
+	
+	while(n>0)
+	{
+		p=n%10;
+		n=n/10;
+		m=p+m*10;
+	}
+	return m;
+}
+int main()
+{
+	int n,m;
+	scanf("%d",&n);
+	printf("%d\n",f(m));
+}
+```
+## 第四題程式碼
+```C
+#include <stdio.h>
+int main()
+{
+	char a[11];
+	int i,x,n,count=0;
+	for(i=0;i<10;i++)
+	{
+		scanf("%d",&a[i]);
+		if(a[i]==0) break;
+	}
+	scanf("%d",&x);
+	n=i;
+	for(i=0;i<n;i++)
+	{
+		if(a[i] == x) count++;
+	}
+	printf("%d\n",count);
+}
+```
+## 第五題程式碼
+```C
+#include <stdio.h>
+int f(int a,int b)
+{
+	if (a<b) return -1;
+	else if(a==b) return 0;
+	else return 1;
+}
+int main(){
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d",f(a,b));
+    return 0;
+}
+```
+## 第六題程式碼
+```C
+#include <stdio.h>
+int main()
+{
+	int a,sum=0;
+	while (a!=999)//999是終止條件
+	{
+		printf("Enter an integer ( 999 to end ): \n");
+		scanf("%d",&a);//a=999
+		sum+=a;
+	}
+	printf("The total is: %d",sum-999);
+}
+```
+## 第七題程式碼
+```C
+#include <stdio.h>
+int main()
+{
+	int a,b;
+	scanf("%d%d",&a,&b);
+	printf("%d",a%b);
+}
+```
+## 第八題程式碼
+```C
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	
+	if(n>=90) printf("A");
+	else if(n < 90 &&  n >= 80) printf("B");
+	else if(n< 80 && n>=70)printf("C");
+	else if(n< 70 && n>=60)printf("D");
+	else printf("F");
+}
+```
+## 第九題程式碼
+```C
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	printf("%d",100+((n-1500)/250)*5+5);
+}
+```
+## 第十題程式碼
+```C
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	printf("%d=50*%d+10*%d+5*%d+1*%d",n,n/50,(n%50)/10,(n%10)/5,(n%5)/1);
+}
+```
  
   
  
