@@ -817,3 +817,45 @@ int main()
 	}
 }
 ```
+2021/05/21程式碼倉庫
+## 第一題程式碼
+```C
+void setup()//只做一次設定
+{
+size(1024,400);
+}
+void draw()//每秒狂做60次
+{
+if(mousePressed)background(160,200,200);
+else background(15,165,200);
+textSize(50);//字的大小  設50號字
+text(a,100,100);//將a在100,100畫出來
+}
+int a=0;//外部變數
+void mousePressed(){//按下去時，會呼叫這個函式
+  a++;
+}
+```
+## 第二題程式碼
+```C
+void setup(){
+  size(1024,400);
+  textFont(createFont ("標楷體",50));
+}
+void draw(){
+  background(160,200,200);
+  textSize(50);
+  int h=hour();
+  int m=minute();
+  int s=second();
+  fill(255,0,0);//充滿墨水的色彩
+  text("NOW:"+ h +":"+ m +":"+ s ,100,100);//現在時間
+ //    字串    數 字串 數 字串 數
+  int total= h*60*60+m*60+s;
+  int total2=12*60*60+0*60+0;
+  text("總秒數:"+total,100,200);
+  int ans=total2-total;
+  int hh=ans/60/60%60,mm=ans/60%60,ss=ans%60;
+  text("還剩下:"+hh+":"+mm+":"+ss,100,300);
+}
+```
