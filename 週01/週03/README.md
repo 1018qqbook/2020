@@ -887,3 +887,78 @@ void mousePressed(){
   N++;
 }
 ```
+2021/06/04程式碼倉庫
+## 第一題程式碼
+```C
+void setup(){
+    size(400,200);
+    textSize(40);
+}
+void draw(){
+    background(41,109,207);
+    int s=second();
+    text(s,100,100);
+}
+```
+## 第二題程式碼
+```C
+void setup(){
+  size(400,200);
+  textSize(40);
+}
+void draw(){
+  background(41,109,207);
+  int s=second();
+  text(9-s%10,100,100);
+}
+```
+## 第三題程式碼
+```C
+import processing.sound.*;
+SoundFile player;
+void setup(){
+  size(400,200);
+  textSize(40);
+  player=new SoundFile(this,"tada.mp3");
+}
+void draw(){
+  background(41,109,207);
+  int s=second();
+  text(9-s%10,100,100);
+  if(9-s%10==0 &&!player.isPlaying()){
+    player.play();
+  }
+}
+```
+## 第四題程式碼
+```C
+import processing.sound.*;
+SoundFile player;
+void setup(){
+  size(400,200);
+  textSize(40);
+  player=new SoundFile(this,"bell.mp3");
+}
+void draw(){
+  background(51,114,191);
+}
+void mousePressed(){
+  if(player.isPlaying() ){
+    player.stop();
+  }else{
+    player.play();
+  }
+}
+```
+## 第五題程式碼
+```C
+function setup(){
+    createCanvas(400,200);
+    textSize(40);
+}
+function draw(){
+    background(41,109,207);
+    let s=second();
+    text(s,100,100);
+}
+```
